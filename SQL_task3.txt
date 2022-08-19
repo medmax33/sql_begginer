@@ -5,6 +5,10 @@ SELECT * FROM Customers WHERE ContactName LIKE 'C%';
 SELECT * FROM Orders 
 WHERE Freight BETWEEN 100 AND 200 AND (ShipCountry = 'USA' OR ShipCountry = 'France'); 
 
+SELECT * FROM Orders
+WHERE (Freight BETWEEN 100 AND 200) AND
+      (ShipCountry IN ('France','USA'))
+
 4.3.3.
 SELECT * FROM EmployeeTerritories
 WHERE TerritoryID BETWEEN 6897 AND 31000; 
