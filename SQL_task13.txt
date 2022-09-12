@@ -3,10 +3,20 @@ UPDATE [Order Details]
 SET Discount = 0.20
 WHERE Quantity > 50;
 
+//Another
+UPDATE [OrderDetails]
+SET Discount = 0.20 
+WHERE ProductID IN
+    (SELECT ProductID IN Products
+    WHERE UnitsInStock > 50)
+
 13.3.2. 
 UPDATE Contacts
 SET City = 'Piter' AND Country = 'Russia'
 WHERE City = 'Berlin' AND Country = 'Germany';
+
+// в задании сказано все контактные данные, ранее 
+приходившиеся на Berlin (поле City) и Germany (поле Country)," поэтому использовал оператор AND
 
 13.3.3. 
 INSERT INTO Shippers (CompanyName, Phone) 
