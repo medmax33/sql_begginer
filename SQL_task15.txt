@@ -1,0 +1,17 @@
+15.7.
+CREATE TABLE Territories (
+	TerritoryID nchar(16) NOT NULL,
+	TerritoryDescription nchar(50) NOT NULL,
+	RegionID int NOT NULL );
+
+INSERT INTO Region (RegionID, RegionDescription, Help)
+VALUES (1, 'Moscow', 'First region');
+INSERT INTO Region (RegionID, RegionDescription, Help)
+VALUES (2, 'St-Peterburg', 'Second region');
+INSERT INTO Region (RegionID, RegionDescription, Help)
+VALUES (3, 'Yekaterinburg', 'Third region');
+
+INSERT INTO Territories (TerritoryID, TerritoryDescription, RegionID)
+VALUES ('CENTR', 'Centr of Moscow', 1);
+INSERT INTO Territories (TerritoryID, TerritoryDescription, RegionID)
+VALUES ('HAMOV', 'Hamovniki', 1);
