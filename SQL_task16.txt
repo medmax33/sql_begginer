@@ -1,0 +1,4 @@
+16.
+CREATE INDEX RegionDesc ON Region (RegionDescription);
+
+CREATE CLUSTERED INDEX RegionIDs on Territories(RegionID)
